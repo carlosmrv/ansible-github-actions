@@ -28,7 +28,7 @@ RUN apk --no-cache add \
     rm -rf /root/.cache/pip
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-COPY entrypoint.sh .
-RUN chmod +x /app/entrypoint.sh
-ENTRYPOINT["/app/entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT["/entrypoint.sh"]
 #ENTRYPOINT ["ansible", "localhost", "-m" ,"ping"]
