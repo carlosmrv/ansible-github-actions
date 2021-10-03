@@ -1,5 +1,3 @@
 #!/bin/sh
 
-# ansible localhost -m ping
-
-echo "Hello World"
+ansible localhost -m ping
