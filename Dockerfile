@@ -28,5 +28,5 @@ RUN apk --no-cache add \
     rm -rf /root/.cache/pip
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+COPY entrypoint.sh .
+ENTRYPOINT ["/bin/sh entrypoint.sh"]
