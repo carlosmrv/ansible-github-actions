@@ -1,1 +1,4 @@
-ansible localhost -m ping
+#
+# ansible localhost -m ping
+
+echo "Hello World"
